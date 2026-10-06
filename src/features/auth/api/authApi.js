@@ -21,7 +21,7 @@ const authApi = (() => {
     });
 
     const result = await response.json();
-    if (result.status !== "success" && !result.success) {
+    if (result.status !== "success") {
       const errorDetails =
         result.data && typeof result.data === "object"
           ? Object.values(result.data).flat().join(", ")
@@ -46,33 +46,16 @@ const authApi = (() => {
     });
 
     const result = await response.json();
-    if (result.status !== "success" && !result.success) {
+    if (result.status !== "success") {
       throw new Error(result.message || "Gagal login");
     }
 
     return result.data;
   }
 
-  async function postLogout() {
-    const response = await apiHelper.fetchData(_url("/logout"), {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    const result = await response.json();
-    if (result.status !== "success" && !result.success) {
-      throw new Error(result.message || "Gagal logout");
-    }
-
-    return result.message;
-  }
-
   return {
     postRegister,
     postLogin,
-    postLogout,
   };
 })();
 
