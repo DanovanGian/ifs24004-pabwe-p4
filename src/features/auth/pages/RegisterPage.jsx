@@ -57,7 +57,7 @@ function RegisterPage() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold">Daftar</h2>
+      <h1 className="text-2xl font-bold">Daftar</h1>
       <p className="mt-1 text-slate-500">Buat akun baru untuk memulai.</p>
 
       <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">

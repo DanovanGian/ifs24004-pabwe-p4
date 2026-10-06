@@ -161,7 +161,7 @@ function HomePage() {
             {item.cover ? (
               <img src={getImageUrl(item.cover)} alt={item.title} className="h-40 w-full object-cover" />
             ) : (
-              <div className="flex h-40 items-center justify-center bg-slate-100 text-sm text-slate-400">
+              <div className="flex h-40 items-center justify-center bg-slate-100 text-sm text-slate-600">
                 Tidak ada foto
               </div>
             )}
@@ -176,7 +176,7 @@ function HomePage() {
               </div>
               <h2 className="font-bold">{item.title}</h2>
               <p className="line-clamp-2 text-sm text-slate-600">{item.description}</p>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-600">
                 {item.author.name} • {formatDate(item.created_at)}
               </p>
               <div className="flex items-center justify-between pt-1">

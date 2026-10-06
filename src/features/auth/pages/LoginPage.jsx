@@ -33,7 +33,7 @@ function LoginPage() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold">Masuk</h2>
+      <h1 className="text-2xl font-bold">Masuk</h1>
       <p className="mt-1 text-slate-500">Silakan masuk ke akunmu.</p>
 
       <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">

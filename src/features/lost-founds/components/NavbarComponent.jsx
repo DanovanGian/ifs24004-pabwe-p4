@@ -66,7 +66,7 @@ function NavbarComponent({ onMenuClick }) {
           )}
           <span className="hidden text-left sm:block">
             <span className="block text-sm font-semibold">{profile.name}</span>
-            <span className="flex items-center gap-1 text-xs text-emerald-600">
+            <span className="flex items-center gap-1 text-xs text-emerald-700">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
               Sesi aktif
             </span>
