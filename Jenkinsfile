@@ -228,7 +228,7 @@ pipeline {
 
                         --output trivy-results.sarif \
 
-                        --exit-code  \
+                        --exit-code 1 \
 
                         .
 
@@ -498,7 +498,7 @@ pipeline {
 
                     def appName = env.JOB_NAME
 
-                        .replaceAll('[^a-zA-Z-._-]', '-')
+                        .replaceAll('[^a-zA-Z0-9._-]', '-')
 
                         .replaceAll('-+', '-')
 
