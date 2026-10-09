@@ -1,0 +1,8 @@
+# Sementara abaikan kerentanan braces dan node-forge
+# 1. braces (stack-exhaustion DoS): no published version fix yet (> 3.0.3)
+GHSA-vfj7-8cjw-p6xm
+CVE-2026-93687
+
+# 2. node-forge (RSA PKCS#1 v1.5 verification in listhen): no published version fix yet (> 1.4.0)
+GHSA-86w9-cpqp-85rv
+CVE-2026-85393
