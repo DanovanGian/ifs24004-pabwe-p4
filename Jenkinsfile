@@ -116,7 +116,7 @@ pipeline {
 
                 docker {
 
-                    image 'node:-alpine'
+                    image 'node:22-alpine'
 
                     reuseNode true
 
@@ -164,7 +164,7 @@ pipeline {
 
                 docker {
 
-                    image 'aquasec/trivy:..'
+                    image 'aquasec/trivy:latest'
 
                     reuseNode true
 
@@ -348,7 +348,7 @@ pipeline {
 
             steps {
 
-                timeout(time: , unit: 'MINUTES') {
+                timeout(time: 10, unit: 'MINUTES') {
 
                     waitForQualityGate abortPipeline: true
 
@@ -372,7 +372,7 @@ pipeline {
 
                 docker {
 
-                    image 'node:-alpine'
+                    image 'node:22-alpine'
 
                     reuseNode true
 
@@ -578,7 +578,7 @@ pipeline {
 
                     def jenkinsBaseUrl = env.BUILD_URL
 
-                        .substring(, env.BUILD_URL.indexOf('/job/'))
+                        .substring(0, env.BUILD_URL.indexOf('/job/'))
 
                         .replace('localhost', 'host.docker.internal')
 
@@ -622,7 +622,7 @@ pipeline {
 
                 docker {
 
-                    image 'curlimages/curl:..'
+                    image 'curlimages/curl:latest'
 
                     reuseNode true
 
@@ -722,9 +722,9 @@ pipeline {
 
 
 
-                    def maxAttempts = 
+                    def maxAttempts = 60
 
-                    def attempt = 
+                    def attempt = 0
 
                     def deploymentStatus = 'IN_PROGRESS'
 
@@ -754,7 +754,7 @@ pipeline {
 
 
 
-                        sleep time: , unit: 'SECONDS'
+                        sleep time: 10, unit: 'SECONDS'
 
 
 
